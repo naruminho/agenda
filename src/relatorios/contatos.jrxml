@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="contatos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a6a48129-90f7-4c47-83d4-d1a48000bde0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="adapter"/>
+	<queryString language="SQL">
+		<![CDATA[select * from contatos]]>
+	</queryString>
+	<field name="id_contato" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_contato"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="contatos"/>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nome"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="contatos"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="contatos"/>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="telefone"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="contatos"/>
+	</field>
+	<variable name="id_contato_SUM" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{id_contato}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="10" width="70" height="50" uuid="4763ef97-6b26-4221-b03b-25a31cc938e3"/>
+				<imageExpression><![CDATA["logotipo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="80" y="10" width="380" height="30" forecolor="#113668" uuid="f23658f4-d729-428a-a16a-31e07b8f40ba"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Faculdades Integradas do Vale do Ribeira]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="10" width="260" height="20" uuid="8d8e60de-1890-408d-9bd8-2c10e15309ec"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE CONTATOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="16" uuid="88248144-6dcd-4167-b187-967008c1cafa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="69f74ec2-c430-4108-abf3-39ab160dbc0d"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="16" uuid="565f0556-c26a-4926-bb24-71354eb525f0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="28773e6d-9185-48fc-ae08-001b6e917148"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="16" uuid="7a40dba7-af1f-406d-84b5-b9b4cf8cc95d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73763a6f-3bfb-4e9c-81ed-4343a3401f18"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[telefone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<textField>
+				<reportElement x="0" y="0" width="185" height="16" uuid="b47af9b2-b186-4506-b5ef-63cb8d79c1c1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="69f74ec2-c430-4108-abf3-39ab160dbc0d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="16" uuid="9ad86c01-4905-42ef-9b99-c2a66feebc9a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="28773e6d-9185-48fc-ae08-001b6e917148"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="16" uuid="c717bfaa-09e6-4efd-b4e2-1f15f0ada991">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73763a6f-3bfb-4e9c-81ed-4343a3401f18"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="61" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="470" y="30" width="100" height="30" uuid="0fd37673-c786-4c95-bd57-8c79c0ba9ff3"/>
+				<textFieldExpression><![CDATA["Pág." + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="22" width="138" height="16" uuid="6bce1c5b-12c3-42ce-b70c-ee9b42e65fc8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Número de contatos: " + $V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
